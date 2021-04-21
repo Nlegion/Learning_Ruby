@@ -1,3 +1,4 @@
+=begin
 temp = "7"
 temp += "2"
 puts temp
@@ -51,4 +52,50 @@ puts res
 
 arr = [5, 6, 8, 3]
 arr.reverse!
-arr[1].times {puts "in a loop"}
+arr[1].times {puts "in a loop"}=end
+
+
+module MyMath
+  PI = 3.14
+  def self.square(x)
+    x*x
+  end
+  def self.negate(x)
+    -x
+  end
+  def self.factorial(x)
+    (1..x).inject(:*) || 1
+  end
+end
+
+puts MyMath.factorial(8)
+
+=end
+
+module Car
+
+  class Volvo
+    @@wheels = 4
+
+    def how_many_wheels
+      @@wheels
+    end
+  end
+end
+module Truck
+
+  class Volvo
+    @@wheels = 6
+
+    def how_many_wheels
+      @@wheels
+    end
+  end
+
+end
+
+сar = Car::Volvo.new
+truck = Truck::Volvo.new
+
+puts сar.how_many_wheels
+puts truck.how_many_wheels
