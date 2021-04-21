@@ -70,7 +70,7 @@ end
 
 puts MyMath.factorial(8)
 
-=end
+
 
 module Car
 
@@ -78,7 +78,7 @@ module Car
     @@wheels = 4
 
     def how_many_wheels
-      @@wheels
+      puts @@wheels
     end
   end
 end
@@ -88,7 +88,7 @@ module Truck
     @@wheels = 6
 
     def how_many_wheels
-      @@wheels
+      puts @@wheels
     end
   end
 
@@ -97,5 +97,24 @@ end
 сar = Car::Volvo.new
 truck = Truck::Volvo.new
 
-puts сar.how_many_wheels
-puts truck.how_many_wheels
+сar.how_many_wheels
+truck.how_many_wheels
+
+Point = Struct.new(:x, :y, :z)
+origin = Point.new(0, 0)
+dest = Point.new(15, 42)
+
+puts dest.y  # 42
+
+=end
+Addr = Struct.new(:a, :b, :c)
+a = Addr.new(3, 5, 2)
+puts a.b
+
+a = lambda { |x, y| x / y }
+puts a.call 7, 2
+
+x = gets
+y = gets
+
+puts a.call x, y
