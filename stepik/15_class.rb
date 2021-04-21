@@ -33,3 +33,18 @@ class B < A
 end
 
 ob = B.new(6)
+
+class Cost
+  attr_accessor :rub, :cop
+
+  def initialize(rub, cop)
+    self.rub = rub
+    self.cop = cop
+  end
+
+  def *(other)
+    Cost.new(self.rub + other.rub, self.cop + other.cop)
+  end
+
+end
+
